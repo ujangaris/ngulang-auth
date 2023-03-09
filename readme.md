@@ -51,3 +51,28 @@
             - import bootsrap module
         5.  asset/images
             - simpan file image2
+
+## Register page
+
+    Todo:
+        1.  Home.jsx
+            - cut code bagian nav
+        2.  components/Navbar.jsx
+            - pastekan code bagian nav dari Home.jsx
+        3.  auth/Register.jsx
+            - deklarasi hooks register
+            - import pasang useNavigate dari react-router-dom
+            - buat dan pasang handleSubmit
+            - pasang toastify
+            - buat dan pasang function genderChange
+        4.  install react-toastify
+            - npm i react-toastify
+        5.  main.js
+            - import toastify module
+        6.  App.js
+            - import dan pasang ToastContainer
+        7.  auth/Login.jsx
+        8.  Pengujian pada browser :
+            - lakukan registrasi form
+            - jika berhasil akan diredirect ke path '/auth/login
+            - dan akan ada toastify success

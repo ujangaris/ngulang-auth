@@ -4,6 +4,76 @@
       "id": 1,
       "name": "John Doe",
       "email": "john@gmail.com"
+    },
+    {
+      "name": "Brenden Reeves",
+      "username": "a",
+      "email": "jisecifeji@mailinator.com",
+      "password": "1",
+      "phone": "+1 (587) 404-4593",
+      "city": "Bandung",
+      "address": "Ex sunt tempore pro",
+      "gender": "",
+      "id": 2
+    },
+    {
+      "name": "Ivana Witt",
+      "username": "a",
+      "email": "kybady@mailinator.com",
+      "password": "1",
+      "phone": "+1 (828) 535-2321",
+      "city": "Jogjakarta",
+      "address": "Commodo beatae sunt",
+      "gender": "",
+      "id": 3
+    },
+    {
+      "female": "",
+      "id": 4
+    },
+    {
+      "name": "Delilah Schultz",
+      "username": "menek",
+      "email": "kuci@mailinator.com",
+      "password": "1",
+      "phone": "+1 (701) 181-7785",
+      "city": "Jakarta",
+      "address": "Ut ab dolorem aut ex",
+      "gender": "male",
+      "id": 5
+    },
+    {
+      "name": "Shelley Rosales",
+      "username": "sabicucyzu",
+      "email": "wifumu@mailinator.com",
+      "password": "1",
+      "phone": "+1 (211) 838-7976",
+      "city": "Bandung",
+      "address": "Consectetur maiores",
+      "gender": "female",
+      "id": 6
+    },
+    {
+      "name": "Delilah Hester",
+      "username": "barytebe",
+      "email": "dyvyqov@mailinator.com",
+      "password": "1",
+      "phone": "+1 (236) 363-7885",
+      "city": "Jogjakarta",
+      "address": "Harum sed praesentiu",
+      "gender": "male",
+      "id": 7
+    },
+    {
+      "name": "Jocelyn Alvarado",
+      "username": "nuvaqipyj",
+      "email": "kifubazi@mailinator.com",
+      "password": "1",
+      "phone": "+1 (286) 366-9521",
+      "city": "Jogjakarta",
+      "address": "Minus reprehenderit",
+      "gender": "male",
+      "id": 8
     }
   ]
 }
