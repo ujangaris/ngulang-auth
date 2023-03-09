@@ -1,69 +1,97 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Open+Sans:wght@300&display=swap');
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+.banner {
+  height: 100vh;
+  width: 100%;
+  background: url('./assets/images/overlay.png'),
+    url('./assets/images/miky.jpg');
+  background-position: top;
+  background-size: cover;
+  /* background-attachment: fisxed; */
+  background-repeat: no-repeat;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.banner .navbar {
+  margin-top: 4%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.navbar .navbar-brand {
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 700px;
+  margin-left: 10%;
+  font-family: 'Fugaz One', cursive;
 }
-button:hover {
-  border-color: #646cff;
+.navbar .navbar-brand .brand {
+  text-decoration: none;
+  color: #e91d43;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.navbar .navbar-brand .brand:hover {
+  background-color: #75ee9d;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+.banner .nav {
+  margin-right: 10%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.banner .nav li a {
+  color: #aaa;
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.banner .nav li a.active,
+.banner .nav li a:hover {
+  background-color: #e91d43;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.banner .nav li a.active {
+  background-color: #75ee9d;
+}
+
+/* akhir nav-link */
+.banner .home {
+  margin-top: 15%;
+  transform: translateY(-15%);
+}
+
+.banner .home h1 {
+  font-size: 2.5em;
+  font-weight: 700px;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: 'Fugaz One', cursive;
+}
+
+.banner .home p {
+  font-size: 2em;
+  font-weight: 500px;
+  color: #aaa;
+  letter-spacing: 2px;
+  font-family: 'Open Sans', sans-serif;
+}
+.banner .home a {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background: #e91d43;
+  padding: 10px 20px;
+  font-size: 1.6em;
+  font-weight: 50px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.banner .home a:hover {
+  background: #75ee9d;
 }

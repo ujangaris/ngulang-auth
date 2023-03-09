@@ -38,3 +38,16 @@
             - setup concurently agar sekali perintah dapat menjalankan server dan aplikasi secara bersamaan
         3.  Pengujian
             - pada terminal ketikan perintah: npm run all
+
+## Setup Template
+
+    Todo:
+        1.  Home.jsx
+        2.  App.jsx
+            - import dan pasang {BrowserRouter,Routes,Route}
+            - import dan pasang Home
+        3.  index.css
+        4.  main.jsx
+            - import bootsrap module
+        5.  asset/images
+            - simpan file image2
