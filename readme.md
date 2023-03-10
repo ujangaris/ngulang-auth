@@ -147,3 +147,28 @@
             - jika mengisi dengan user terdaftar akan berhasil akan ada notifikasi login berhasil
               dan redirect kehalaman home,
             - jika setelah login berhasil mencoba masuk kehalaman register akan kembali diarahkan kehalaman home
+
+## Perbaiki Register dan menapilkan username yang login
+
+    Todo:
+        1.  components/Navbar.jsx
+            - deklarasi dan pasang hooks username , agar dapat menampilkan nama user yang login
+            - import dan pasang toastify
+            - tampilkan nama user yang login
+        2.  auth/Register.jsx
+            - perbaikan error register
+        3.  Home.jsx
+            - deklarasi hooks islogged
+            - pasang useEffect  untuk memeriksa apakah ada data username yang tersimpan di session storage.
+            - Membuat sebuah variabel dengan nama username,
+              yang berisi data yang tersimpan di session storage dengan key 'username'.
+            - tampilkan username yang tampil
+        4.  index.html
+            pasang mdn fontawesome
+        5.  index.css
+            - styling font untuk username pada halaman home
+        6. pengujian pada browser:
+            - pada halaman home klik button login/ http://localhost:5173/auth/login
+            - jika mengisi dengan user terdaftar akan berhasil akan ada notifikasi login berhasil
+              dan redirect kehalaman home,
+            - akan ada username yang login pada navbar dan content home

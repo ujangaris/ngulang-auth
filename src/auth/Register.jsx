@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { toast } from 'react-toastify'
 import axios from 'axios'
@@ -40,10 +40,10 @@ const Register = () => {
         .post(`http://localhost:3001/users`, register)
         .then((res) => {
           // menyimpan data di dalam sessionStorage browser.
-          sessionStorage.setItem('username', res.data[0].username)
           //pasang toastify
           toast.success('Register Berhasil!')
           navigate('/auth/login')
+
           console.log(res)
         })
         .catch((err) => {
@@ -62,7 +62,7 @@ const Register = () => {
     if (sessionStorage.getItem('username')) {
       navigate('/')
     }
-  }, [navigate])
+  }, [navigate, sessionStorage.getItem('username')])
   return (
     <>
       <div className='container-fluid banner'>
@@ -220,9 +220,17 @@ const Register = () => {
                     <button type='submit' className='btn btn-success'>
                       Register
                     </button>
-                    <button type='submit' className='btn btn-danger mx-2'>
+                    <Link to='/' type='submit' className='btn btn-danger mx-2'>
                       Back
-                    </button>
+                    </Link>
+                    <>
+                      <span className='mx-5'>
+                        Sudah punya akun?
+                        <Link to='/auth/login' className=' mx-2'>
+                          Klik
+                        </Link>
+                      </span>
+                    </>
                   </div>
                 </div>
               </form>
