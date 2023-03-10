@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { toast } from 'react-toastify'
@@ -7,32 +7,51 @@ const Register = () => {
   // deklarasi hooks login
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-
+  // buta validasi username and password
+  const validate = () => {
+    let result = true
+    if (username === '' || username === null) {
+      result = false
+      toast.warning('Please enter a Username')
+    }
+    if (password === '' || password === null) {
+      result = false
+      toast.warning('Please enter a Password')
+    }
+    return result
+  }
   //   pasang useNavigate dari react-router-dom
   const navigate = useNavigate()
   //   buat submitLogin
   const submitLogin = (e) => {
     e.preventDefault()
-
-    axios
-      .get(
-        `http://localhost:3001/users?username=${username}&&password=${password}`
-      )
-      .then((res) => {
-        if (res.data.length > 0) {
-          sessionStorage.setItem('username', res.data[0].username)
-          toast.success('Berhasil login!')
-          navigate('/')
-        } else {
-          toast.error('Username atau password salah!')
-        }
-      })
-      .catch((err) => {
-        toast.error('Gagal login!')
-        console.log(err)
-      })
+    // pasang validasi
+    if (validate) {
+      axios
+        .get(
+          `http://localhost:3001/users?username=${username}&&password=${password}`
+        )
+        .then((res) => {
+          if (res.data.length > 0) {
+            sessionStorage.setItem('username', res.data[0].username)
+            toast.success('Berhasil login!')
+            navigate('/')
+          } else {
+            toast.error('Username atau password salah!')
+          }
+        })
+        .catch((err) => {
+          toast.error('Gagal login!')
+          console.log(err)
+        })
+    }
   }
-
+  // protected redirect ketika sudah login
+  useEffect(() => {
+    if (sessionStorage.getItem('username')) {
+      navigate('/')
+    }
+  }, [navigate])
   return (
     <>
       <div className='container-fluid banner'>

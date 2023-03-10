@@ -100,3 +100,17 @@
             - lakukan logi dengan user yang terdaftar
             - jika berhasil akan ada notifikasi login berhasil dan redirect kehalaman home
 
+## Validasi dan prtection route ketika sudah login
+
+    Todo:
+        1.  auth/Login.jsx
+            - buat dan pasang  validasi username and password
+            - protected redirect ketika sudah login
+        2. pengujian pada browser:
+            - pada halaman home klik button login/ http://localhost:5173/auth/login
+            - lakukan logi dengan mengosongkan form , maka akam ada notifikasi gagal login
+            - jika mengisi dengan user terdaftar akan berhasil akan ada notifikasi login berhasil 
+              dan redirect kehalaman home, 
+            - jika setelah login berhasil mencoba masuk kehalaman login akan kembali diarahkan kehalaman home
+
+        
