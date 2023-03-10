@@ -76,3 +76,27 @@
             - lakukan registrasi form
             - jika berhasil akan diredirect ke path '/auth/login
             - dan akan ada toastify success
+
+## Login page
+
+    Todo:
+        1.  auth/Login.jsx
+            - deklarasi hooks login
+            - pasang useNavigate dari react-router-dom
+            - buat dan pasang submitLogin
+            - pasang onchange
+            - pasang toastify untuk notifikasi
+        2.  App.js
+            - daftarkan route login
+        3.  components/Navbar.jsx
+            - deklarasi hooks islogged dan pasang sebagai logic untuk menu
+            - pasang useEffect  untuk memeriksa apakah ada data username yang tersimpan di session storage.
+            - ketika belum login button login dan register tampil,
+              namun button logout tidak tampil
+            - ketika sudah  login button login dan register disembunyikan,
+              namun button logout akan tampil
+        4. pengujian pada browser:
+            - pada halaman home klik button login/ http://localhost:5173/auth/login
+            - lakukan logi dengan user yang terdaftar
+            - jika berhasil akan ada notifikasi login berhasil dan redirect kehalaman home
+

@@ -74,6 +74,28 @@
       "address": "Minus reprehenderit",
       "gender": "male",
       "id": 8
+    },
+    {
+      "name": "Aretha Sampson",
+      "username": "jupoxic",
+      "email": "fexyvy@mailinator.com",
+      "password": "1",
+      "phone": "+1 (883) 854-9659",
+      "city": "Jogjakarta",
+      "address": "Aut in et quia qui m",
+      "gender": "female",
+      "id": 9
+    },
+    {
+      "name": "Russell Case",
+      "username": "kocusig",
+      "email": "jiwow@mailinator.com",
+      "password": "1",
+      "phone": "+1 (434) 234-6078",
+      "city": "Bandung",
+      "address": "Itaque omnis quia re",
+      "gender": "male",
+      "id": 10
     }
   ]
 }
