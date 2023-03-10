@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+import IsValidate from '../components/IsValidate'
 const Register = () => {
   // deklarasi hooks register
   const [register, setRegister] = useState({
@@ -20,23 +21,48 @@ const Register = () => {
   //   buat handleSubmit
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios
-      .post(`http://localhost:3001/users`, register)
-      .then((res) => {
-        //pasang toastify
-        toast.success('Register Berhasil!')
-        navigate('/auth/login')
-        console.log(res)
+
+    const { username, name, email, phone, password, city, address, gender } =
+      register
+    if (
+      IsValidate({
+        username,
+        name,
+        email,
+        phone,
+        password,
+        city,
+        address,
+        gender,
       })
-      .catch((err) => {
-        console.log(err)
-      })
+    ) {
+      axios
+        .post(`http://localhost:3001/users`, register)
+        .then((res) => {
+          // menyimpan data di dalam sessionStorage browser.
+          sessionStorage.setItem('username', res.data[0].username)
+          //pasang toastify
+          toast.success('Register Berhasil!')
+          navigate('/auth/login')
+          console.log(res)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
   }
   //   buat function genderChange
   const genderChange = (e) => {
     const value = e.target.value
     setRegister({ ...register, gender: value })
   }
+  // protected redirect ketika sudah login
+  useEffect(() => {
+    // mengakses data yang telah disimpan pada sessionStorage, jika ada true
+    if (sessionStorage.getItem('username')) {
+      navigate('/')
+    }
+  }, [navigate])
   return (
     <>
       <div className='container-fluid banner'>

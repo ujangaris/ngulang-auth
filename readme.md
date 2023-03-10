@@ -124,3 +124,26 @@
             - jika tombol logout di klik sesion akan dihapus ,
             - setelah session dihapus akan di redirect kehalaman home dan
               menampilkan button login ,register dan menyembunyikan button logout
+
+## Validasi Register dan prtection route ketika sudah login
+
+    Todo:
+        1.  components/IsValidate.jsx
+            - buat function Validate yang isinya
+              akan menghanlde jika user tidak mengisi form dengan benar
+        2.  auth/Register.jsx
+            - import dan pasang IsValidate
+        3.  pengujian pada browser:
+            - pada halaman home klik button register, kemudian coba submit dengan
+              mengosongkan data, jika setup yang kita lakukan berhasil
+              maka akan ada pesan peringatan
+        4.  auth/Register.jsx
+            - simpan data di dalam sessionStorage browser.
+            - protected redirect ketika sudah login
+            - mengakses data yang telah disimpan pada sessionStorage, jika ada true
+        5. pengujian pada browser:
+            - pada halaman home klik button login/ http://localhost:5173/auth/login
+            - lakukan logi dengan mengosongkan form , maka akam ada notifikasi gagal login
+            - jika mengisi dengan user terdaftar akan berhasil akan ada notifikasi login berhasil
+              dan redirect kehalaman home,
+            - jika setelah login berhasil mencoba masuk kehalaman register akan kembali diarahkan kehalaman home

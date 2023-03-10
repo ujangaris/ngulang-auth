@@ -96,6 +96,17 @@
       "address": "Itaque omnis quia re",
       "gender": "male",
       "id": 10
+    },
+    {
+      "name": "adad",
+      "username": "dara",
+      "email": "asdad@gmail.com",
+      "password": "1",
+      "phone": "3",
+      "city": "Bandung",
+      "address": "dada",
+      "gender": "female",
+      "id": 11
     }
   ]
 }
