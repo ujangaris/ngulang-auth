@@ -109,8 +109,18 @@
         2. pengujian pada browser:
             - pada halaman home klik button login/ http://localhost:5173/auth/login
             - lakukan logi dengan mengosongkan form , maka akam ada notifikasi gagal login
-            - jika mengisi dengan user terdaftar akan berhasil akan ada notifikasi login berhasil 
-              dan redirect kehalaman home, 
+            - jika mengisi dengan user terdaftar akan berhasil akan ada notifikasi login berhasil
+              dan redirect kehalaman home,
             - jika setelah login berhasil mencoba masuk kehalaman login akan kembali diarahkan kehalaman home
 
-        
+## Logout
+
+    Todo:
+        1.  components/Navbar.jsx
+            - buat dan pasang handleLogout
+        2.  pengujian pada browser:
+            ketika sudah login , klik button logout
+            - buka juga inspsek lalu -> aplication dan pilih session storage
+            - jika tombol logout di klik sesion akan dihapus ,
+            - setelah session dihapus akan di redirect kehalaman home dan
+              menampilkan button login ,register dan menyembunyikan button logout

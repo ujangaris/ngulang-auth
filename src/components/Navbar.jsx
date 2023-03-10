@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   // deklarasi hooks islogged
   const [isLogged, setIsLogged] = useState(false)
-  // pasang useEffect  untuk memeriksa apakah ada data username yang tersimpan di session storage. 
+  // pasang useEffect  untuk memeriksa apakah ada data username yang tersimpan di session storage.
   useEffect(() => {
     // Membuat sebuah variabel dengan nama username, yang berisi data yang tersimpan di session storage dengan key 'username'.
     let username = sessionStorage.getItem('username')
@@ -15,6 +15,13 @@ const Navbar = () => {
       setIsLogged(false)
     }
   }, [])
+  // pasang handleLogout
+  const handleLogout = () => {
+    sessionStorage.removeItem('username')
+    setIsLogged(false)
+    toast.info('Anda telah logout!')
+    navigate('/login')
+  }
   return (
     <>
       <nav className='navbar navbar-md'>
@@ -48,7 +55,7 @@ const Navbar = () => {
           {isLogged && (
             <>
               <li className='nav-item'>
-                <Link to='#' className='nav-link'>
+                <Link to='#' className='nav-link' onClick={handleLogout}>
                   {' '}
                   Logout{' '}
                 </Link>
